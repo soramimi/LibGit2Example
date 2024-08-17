@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{26E6291F-1755-31FD-9A62-5743E39CEC19}</ProjectGuid>
+    <RootNamespace>libgit2</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.22621.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>_bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>libgit2</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>_bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>libgit2</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>_bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>libgit2</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>_bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>libgit2</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libgit2</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libgit2</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libgit2</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libgit2</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>_bin\</OutDir>
+    <IntDir>debug\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\zlib;config;config\win32;libgit2;libgit2\include;libgit2\src\util;libgit2\src\libgit2;libgit2\deps\pcre;libgit2\deps\xdiff;libgit2\deps\llhttp;..\..\Qt\6.7.2\msvc2019_64\include;..\..\Qt\6.7.2\msvc2019_64\include\QtGui;..\..\Qt\6.7.2\msvc2019_64\include\QtCore;release;/include;..\..\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;NDEBUG;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\libgit2.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;NDEBUG;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\zlib;config;config\win32;libgit2;libgit2\include;libgit2\src\util;libgit2\src\libgit2;libgit2\deps\pcre;libgit2\deps\xdiff;libgit2\deps\llhttp;..\..\Qt\6.7.2\msvc2019_64\include;..\..\Qt\6.7.2\msvc2019_64\include\QtGui;..\..\Qt\6.7.2\msvc2019_64\include\QtCore;release;/include;..\..\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;NDEBUG;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\libgit2.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;NDEBUG;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\zlib;config;config\win32;libgit2;libgit2\include;libgit2\src\util;libgit2\src\libgit2;libgit2\deps\pcre;libgit2\deps\xdiff;libgit2\deps\llhttp;..\..\Qt\6.7.2\msvc2019_64\include;..\..\Qt\6.7.2\msvc2019_64\include\QtGui;..\..\Qt\6.7.2\msvc2019_64\include\QtCore;debug;/include;..\..\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <ForcedIncludeFiles>config/pcre_config.h;config/git2_features.h;libgit2/include/git2/common.h;libgit2/src/util/thread.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\libgit2.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\zlib;config;config\win32;libgit2;libgit2\include;libgit2\src\util;libgit2\src\libgit2;libgit2\deps\pcre;libgit2\deps\xdiff;libgit2\deps\llhttp;..\..\Qt\6.7.2\msvc2019_64\include;..\..\Qt\6.7.2\msvc2019_64\include\QtGui;..\..\Qt\6.7.2\msvc2019_64\include\QtCore;debug;/include;..\..\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <ForcedIncludeFiles>config/pcre_config.h;config/git2_features.h;libgit2/include/git2/common.h;libgit2/src/util/thread.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\libgit2.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;GIT_THREADS=1;GIT_WIN32=1;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="libgit2\deps\llhttp\llhttp_api.c" />
+    <ClCompile Include="libgit2\deps\llhttp\llhttp_http.c" />
+    <ClCompile Include="libgit2\deps\zlib\adler32.c" />
+    <ClCompile Include="libgit2\src\util\alloc.c" />
+    <ClCompile Include="libgit2\src\libgit2\annotated_commit.c" />
+    <ClCompile Include="libgit2\src\libgit2\apply.c" />
+    <ClCompile Include="libgit2\src\libgit2\attr.c" />
+    <ClCompile Include="libgit2\src\libgit2\attr_file.c" />
+    <ClCompile Include="libgit2\src\libgit2\attrcache.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\auth.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\auth_gssapi.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\auth_ntlmclient.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\auth_sspi.c" />
+    <ClCompile Include="libgit2\src\libgit2\blame.c" />
+    <ClCompile Include="libgit2\src\libgit2\blame_git.c" />
+    <ClCompile Include="libgit2\src\libgit2\blob.c" />
+    <ClCompile Include="libgit2\src\libgit2\branch.c" />
+    <ClCompile Include="libgit2\src\libgit2\buf.c" />
+    <ClCompile Include="libgit2\src\util\hash\builtin.c" />
+    <ClCompile Include="libgit2\src\libgit2\cache.c" />
+    <ClCompile Include="libgit2\src\libgit2\checkout.c" />
+    <ClCompile Include="libgit2\src\libgit2\cherrypick.c" />
+    <ClCompile Include="libgit2\src\libgit2\clone.c" />
+    <ClCompile Include="libgit2\src\libgit2\commit.c" />
+    <ClCompile Include="libgit2\src\libgit2\commit_graph.c" />
+    <ClCompile Include="libgit2\src\libgit2\commit_list.c" />
+    <ClCompile Include="libgit2\src\libgit2\config.c" />
+    <ClCompile Include="libgit2\src\libgit2\config_cache.c" />
+    <ClCompile Include="libgit2\src\libgit2\config_file.c" />
+    <ClCompile Include="libgit2\src\libgit2\config_list.c" />
+    <ClCompile Include="libgit2\src\libgit2\config_mem.c" />
+    <ClCompile Include="libgit2\src\libgit2\config_parse.c" />
+    <ClCompile Include="libgit2\src\libgit2\config_snapshot.c" />
+    <ClCompile Include="libgit2\deps\zlib\crc32.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\credential.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\credential_helpers.c" />
+    <ClCompile Include="libgit2\src\libgit2\crlf.c" />
+    <ClCompile Include="libgit2\src\util\date.c" />
+    <ClCompile Include="libgit2\src\util\allocators\debugalloc.c" />
+    <ClCompile Include="libgit2\deps\zlib\deflate.c" />
+    <ClCompile Include="libgit2\src\libgit2\delta.c" />
+    <ClCompile Include="libgit2\src\libgit2\describe.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_driver.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_file.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_generate.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_parse.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_print.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_stats.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_tform.c" />
+    <ClCompile Include="libgit2\src\libgit2\diff_xdiff.c" />
+    <ClCompile Include="libgit2\src\util\win32\dir.c" />
+    <ClCompile Include="libgit2\src\libgit2\email.c" />
+    <ClCompile Include="libgit2\src\util\win32\error.c" />
+    <ClCompile Include="libgit2\src\util\errors.c" />
+    <ClCompile Include="libgit2\src\util\allocators\failalloc.c" />
+    <ClCompile Include="libgit2\src\libgit2\fetch.c" />
+    <ClCompile Include="libgit2\src\libgit2\fetchhead.c" />
+    <ClCompile Include="libgit2\src\util\filebuf.c" />
+    <ClCompile Include="libgit2\src\libgit2\filter.c" />
+    <ClCompile Include="libgit2\src\util\fs_path.c" />
+    <ClCompile Include="libgit2\src\util\futils.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\git.c" />
+    <ClCompile Include="libgit2\src\libgit2\grafts.c" />
+    <ClCompile Include="libgit2\src\libgit2\graph.c" />
+    <ClCompile Include="libgit2\src\util\hash.c" />
+    <ClCompile Include="libgit2\src\libgit2\hashsig.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\http.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\httpclient.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\httpparser.c" />
+    <ClCompile Include="libgit2\src\libgit2\ident.c" />
+    <ClCompile Include="libgit2\src\libgit2\idxmap.c" />
+    <ClCompile Include="libgit2\src\libgit2\ignore.c" />
+    <ClCompile Include="libgit2\src\libgit2\index.c" />
+    <ClCompile Include="libgit2\src\libgit2\indexer.c" />
+    <ClCompile Include="libgit2\deps\zlib\infback.c" />
+    <ClCompile Include="libgit2\deps\zlib\inffast.c" />
+    <ClCompile Include="libgit2\deps\zlib\inflate.c" />
+    <ClCompile Include="libgit2\deps\zlib\inftrees.c" />
+    <ClCompile Include="libgit2\src\libgit2\iterator.c" />
+    <ClCompile Include="libgit2\src\libgit2\libgit2.c" />
+    <ClCompile Include="libgit2\deps\llhttp\llhttp.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\local.c" />
+    <ClCompile Include="libgit2\src\libgit2\mailmap.c" />
+    <ClCompile Include="libgit2\src\util\win32\map.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\mbedtls.c" />
+    <ClCompile Include="libgit2\src\libgit2\merge.c" />
+    <ClCompile Include="libgit2\src\libgit2\merge_driver.c" />
+    <ClCompile Include="libgit2\src\libgit2\merge_file.c" />
+    <ClCompile Include="libgit2\src\libgit2\message.c" />
+    <ClCompile Include="libgit2\src\libgit2\midx.c" />
+    <ClCompile Include="libgit2\src\libgit2\mwindow.c" />
+    <ClCompile Include="libgit2\src\util\net.c" />
+    <ClCompile Include="libgit2\src\libgit2\notes.c" />
+    <ClCompile Include="libgit2\src\libgit2\object.c" />
+    <ClCompile Include="libgit2\src\libgit2\object_api.c" />
+    <ClCompile Include="libgit2\src\libgit2\odb.c" />
+    <ClCompile Include="libgit2\src\libgit2\odb_loose.c" />
+    <ClCompile Include="libgit2\src\libgit2\odb_mempack.c" />
+    <ClCompile Include="libgit2\src\libgit2\odb_pack.c" />
+    <ClCompile Include="libgit2\src\libgit2\offmap.c" />
+    <ClCompile Include="libgit2\src\libgit2\oid.c" />
+    <ClCompile Include="libgit2\src\libgit2\oidarray.c" />
+    <ClCompile Include="libgit2\src\libgit2\oidmap.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\openssl.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\openssl_dynamic.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\openssl_legacy.c" />
+    <ClCompile Include="libgit2\src\libgit2\pack-objects.c" />
+    <ClCompile Include="libgit2\src\libgit2\pack.c" />
+    <ClCompile Include="libgit2\src\libgit2\parse.c" />
+    <ClCompile Include="libgit2\src\libgit2\patch.c" />
+    <ClCompile Include="libgit2\src\libgit2\patch_generate.c" />
+    <ClCompile Include="libgit2\src\libgit2\patch_parse.c" />
+    <ClCompile Include="libgit2\src\libgit2\path.c" />
+    <ClCompile Include="libgit2\src\util\win32\path_w32.c" />
+    <ClCompile Include="libgit2\src\libgit2\pathspec.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_byte_order.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_chartables.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_compile.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_config.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_dfa_exec.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_exec.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_fullinfo.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_get.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_globals.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_jit_compile.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_maketables.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_newline.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_ord2utf8.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_refcount.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_string_utils.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_study.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_tables.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_ucd.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_valid_utf8.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_version.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcre_xclass.c" />
+    <ClCompile Include="libgit2\deps\pcre\pcreposix.c" />
+    <ClCompile Include="libgit2\src\util\pool.c" />
+    <ClCompile Include="libgit2\src\util\posix.c" />
+    <ClCompile Include="libgit2\src\util\win32\posix_w32.c" />
+    <ClCompile Include="libgit2\src\util\pqueue.c" />
+    <ClCompile Include="libgit2\src\util\win32\precompiled.c" />
+    <ClCompile Include="libgit2\src\util\win32\process.c" />
+    <ClCompile Include="libgit2\src\libgit2\proxy.c" />
+    <ClCompile Include="libgit2\src\libgit2\push.c" />
+    <ClCompile Include="libgit2\src\util\rand.c" />
+    <ClCompile Include="libgit2\src\libgit2\reader.c" />
+    <ClCompile Include="libgit2\src\libgit2\rebase.c" />
+    <ClCompile Include="libgit2\src\libgit2\refdb.c" />
+    <ClCompile Include="libgit2\src\libgit2\refdb_fs.c" />
+    <ClCompile Include="libgit2\src\libgit2\reflog.c" />
+    <ClCompile Include="libgit2\src\libgit2\refs.c" />
+    <ClCompile Include="libgit2\src\libgit2\refspec.c" />
+    <ClCompile Include="libgit2\src\util\regexp.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\registry.c" />
+    <ClCompile Include="libgit2\src\libgit2\remote.c" />
+    <ClCompile Include="libgit2\src\libgit2\repository.c" />
+    <ClCompile Include="libgit2\src\libgit2\reset.c" />
+    <ClCompile Include="libgit2\src\libgit2\revert.c" />
+    <ClCompile Include="libgit2\src\libgit2\revparse.c" />
+    <ClCompile Include="libgit2\src\libgit2\revwalk.c" />
+    <ClCompile Include="libgit2\src\util\runtime.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\schannel.c" />
+    <ClCompile Include="libgit2\src\libgit2\settings.c" />
+    <ClCompile Include="libgit2\src\util\hash\rfc6234\sha224-256.c" />
+    <ClCompile Include="libgit2\src\libgit2\signature.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\smart.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\smart_pkt.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\smart_protocol.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\socket.c" />
+    <ClCompile Include="libgit2\src\util\sortedcache.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\ssh.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\ssh_exec.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\ssh_libssh2.c" />
+    <ClCompile Include="libgit2\src\libgit2\stash.c" />
+    <ClCompile Include="libgit2\src\libgit2\status.c" />
+    <ClCompile Include="libgit2\src\util\allocators\stdalloc.c" />
+    <ClCompile Include="libgit2\src\util\str.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\stransport.c" />
+    <ClCompile Include="libgit2\src\libgit2\strarray.c" />
+    <ClCompile Include="libgit2\src\util\strlist.c" />
+    <ClCompile Include="libgit2\src\util\strmap.c" />
+    <ClCompile Include="libgit2\src\libgit2\submodule.c" />
+    <ClCompile Include="libgit2\src\libgit2\sysdir.c" />
+    <ClCompile Include="libgit2\src\libgit2\tag.c" />
+    <ClCompile Include="libgit2\src\util\thread.c" />
+    <ClCompile Include="libgit2\src\libgit2\streams\tls.c" />
+    <ClCompile Include="libgit2\src\libgit2\trace.c" />
+    <ClCompile Include="libgit2\src\libgit2\trailer.c" />
+    <ClCompile Include="libgit2\src\libgit2\transaction.c" />
+    <ClCompile Include="libgit2\src\libgit2\transport.c" />
+    <ClCompile Include="libgit2\src\libgit2\tree-cache.c" />
+    <ClCompile Include="libgit2\src\libgit2\tree.c" />
+    <ClCompile Include="libgit2\deps\zlib\trees.c" />
+    <ClCompile Include="libgit2\src\util\tsort.c" />
+    <ClCompile Include="libgit2\src\util\win32\utf-conv.c" />
+    <ClCompile Include="libgit2\src\util\utf8.c" />
+    <ClCompile Include="libgit2\src\util\util.c" />
+    <ClCompile Include="libgit2\src\util\varint.c" />
+    <ClCompile Include="libgit2\src\util\vector.c" />
+    <ClCompile Include="libgit2\src\util\win32\w32_buffer.c" />
+    <ClCompile Include="libgit2\src\util\win32\w32_leakcheck.c" />
+    <ClCompile Include="libgit2\src\util\win32\w32_util.c" />
+    <ClCompile Include="libgit2\src\util\wildmatch.c" />
+    <ClCompile Include="libgit2\src\util\hash\win32.c" />
+    <ClCompile Include="libgit2\src\util\allocators\win32_leakcheck.c" />
+    <ClCompile Include="libgit2\src\libgit2\transports\winhttp.c" />
+    <ClCompile Include="libgit2\src\libgit2\worktree.c" />
+    <ClCompile Include="libgit2\deps\xdiff\xdiffi.c" />
+    <ClCompile Include="libgit2\deps\xdiff\xemit.c" />
+    <ClCompile Include="libgit2\deps\xdiff\xhistogram.c" />
+    <ClCompile Include="libgit2\deps\xdiff\xmerge.c" />
+    <ClCompile Include="libgit2\deps\xdiff\xpatience.c" />
+    <ClCompile Include="libgit2\deps\xdiff\xprepare.c" />
+    <ClCompile Include="libgit2\deps\xdiff\xutils.c" />
+    <ClCompile Include="libgit2\src\util\win32\win32_thread.c" />
+    <ClCompile Include="libgit2\src\util\zstream.c" />
+    <ClCompile Include="libgit2\deps\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libgit2\deps\llhttp\llhttp.h" />
+    <ClInclude Include="libgit2\src\util\alloc.h" />
+    <ClInclude Include="libgit2\src\libgit2\annotated_commit.h" />
+    <ClInclude Include="libgit2\src\libgit2\apply.h" />
+    <ClInclude Include="libgit2\src\util\array.h" />
+    <ClInclude Include="libgit2\src\util\assert_safe.h" />
+    <ClInclude Include="libgit2\src\libgit2\attr.h" />
+    <ClInclude Include="libgit2\src\libgit2\attr_file.h" />
+    <ClInclude Include="libgit2\src\libgit2\attrcache.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\auth.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\auth_negotiate.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\auth_ntlm.h" />
+    <ClInclude Include="libgit2\src\util\bitvec.h" />
+    <ClInclude Include="libgit2\src\libgit2\blame.h" />
+    <ClInclude Include="libgit2\src\libgit2\blame_git.h" />
+    <ClInclude Include="libgit2\src\libgit2\blob.h" />
+    <ClInclude Include="libgit2\src\libgit2\branch.h" />
+    <ClInclude Include="libgit2\src\libgit2\buf.h" />
+    <ClInclude Include="libgit2\src\util\hash\builtin.h" />
+    <ClInclude Include="libgit2\src\libgit2\cache.h" />
+    <ClInclude Include="libgit2\src\util\cc-compat.h" />
+    <ClInclude Include="libgit2\src\libgit2\checkout.h" />
+    <ClInclude Include="libgit2\src\libgit2\clone.h" />
+    <ClInclude Include="libgit2\src\util\hash\collisiondetect.h" />
+    <ClInclude Include="libgit2\src\libgit2\commit.h" />
+    <ClInclude Include="libgit2\src\libgit2\commit_graph.h" />
+    <ClInclude Include="libgit2\src\libgit2\commit_list.h" />
+    <ClInclude Include="libgit2\src\libgit2\common.h" />
+    <ClInclude Include="libgit2\src\util\hash\common_crypto.h" />
+    <ClInclude Include="libgit2\src\libgit2\config.h" />
+    <ClInclude Include="libgit2\src\libgit2\config_backend.h" />
+    <ClInclude Include="libgit2\src\libgit2\config_list.h" />
+    <ClInclude Include="libgit2\src\libgit2\config_parse.h" />
+    <ClInclude Include="libgit2\deps\zlib\crc32.h" />
+    <ClInclude Include="libgit2\src\util\ctype_compat.h" />
+    <ClInclude Include="libgit2\src\util\date.h" />
+    <ClInclude Include="libgit2\src\util\allocators\debugalloc.h" />
+    <ClInclude Include="libgit2\deps\zlib\deflate.h" />
+    <ClInclude Include="libgit2\src\libgit2\delta.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff_driver.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff_file.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff_generate.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff_parse.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff_stats.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff_tform.h" />
+    <ClInclude Include="libgit2\src\libgit2\diff_xdiff.h" />
+    <ClInclude Include="libgit2\src\util\win32\dir.h" />
+    <ClInclude Include="libgit2\src\libgit2\email.h" />
+    <ClInclude Include="libgit2\src\util\win32\error.h" />
+    <ClInclude Include="libgit2\src\util\errors.h" />
+    <ClInclude Include="libgit2\src\util\allocators\failalloc.h" />
+    <ClInclude Include="libgit2\src\libgit2\fetch.h" />
+    <ClInclude Include="libgit2\src\libgit2\fetchhead.h" />
+    <ClInclude Include="libgit2\src\util\filebuf.h" />
+    <ClInclude Include="libgit2\src\libgit2\filter.h" />
+    <ClInclude Include="libgit2\src\util\fs_path.h" />
+    <ClInclude Include="libgit2\src\util\futils.h" />
+    <ClInclude Include="libgit2\deps\xdiff\git-xdiff.h" />
+    <ClInclude Include="config\git2_features.h" />
+    <ClInclude Include="libgit2\src\util\git2_util.h" />
+    <ClInclude Include="libgit2\src\libgit2\grafts.h" />
+    <ClInclude Include="libgit2\deps\zlib\gzguts.h" />
+    <ClInclude Include="libgit2\src\util\hash.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\http.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\httpclient.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\httpparser.h" />
+    <ClInclude Include="libgit2\src\libgit2\idxmap.h" />
+    <ClInclude Include="libgit2\src\libgit2\ignore.h" />
+    <ClInclude Include="libgit2\src\libgit2\index.h" />
+    <ClInclude Include="libgit2\src\libgit2\indexer.h" />
+    <ClInclude Include="libgit2\deps\zlib\inffast.h" />
+    <ClInclude Include="libgit2\deps\zlib\inffixed.h" />
+    <ClInclude Include="libgit2\deps\zlib\inflate.h" />
+    <ClInclude Include="libgit2\deps\zlib\inftrees.h" />
+    <ClInclude Include="libgit2\src\util\integer.h" />
+    <ClInclude Include="libgit2\src\libgit2\iterator.h" />
+    <ClInclude Include="libgit2\src\util\khash.h" />
+    <ClInclude Include="libgit2\src\libgit2\mailmap.h" />
+    <ClInclude Include="libgit2\src\util\map.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\mbedtls.h" />
+    <ClInclude Include="libgit2\src\util\hash\mbedtls.h" />
+    <ClInclude Include="libgit2\src\libgit2\merge.h" />
+    <ClInclude Include="libgit2\src\libgit2\merge_driver.h" />
+    <ClInclude Include="libgit2\src\libgit2\midx.h" />
+    <ClInclude Include="libgit2\src\util\win32\mingw-compat.h" />
+    <ClInclude Include="libgit2\src\util\win32\msvc-compat.h" />
+    <ClInclude Include="libgit2\src\libgit2\mwindow.h" />
+    <ClInclude Include="libgit2\src\util\net.h" />
+    <ClInclude Include="libgit2\src\libgit2\notes.h" />
+    <ClInclude Include="libgit2\src\libgit2\object.h" />
+    <ClInclude Include="libgit2\src\libgit2\odb.h" />
+    <ClInclude Include="libgit2\src\libgit2\offmap.h" />
+    <ClInclude Include="libgit2\src\libgit2\oid.h" />
+    <ClInclude Include="libgit2\src\libgit2\oidarray.h" />
+    <ClInclude Include="libgit2\src\libgit2\oidmap.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\openssl.h" />
+    <ClInclude Include="libgit2\src\util\hash\openssl.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\openssl_dynamic.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\openssl_legacy.h" />
+    <ClInclude Include="libgit2\src\libgit2\pack-objects.h" />
+    <ClInclude Include="libgit2\src\libgit2\pack.h" />
+    <ClInclude Include="libgit2\src\libgit2\parse.h" />
+    <ClInclude Include="libgit2\src\libgit2\patch.h" />
+    <ClInclude Include="libgit2\src\libgit2\patch_generate.h" />
+    <ClInclude Include="libgit2\src\libgit2\patch_parse.h" />
+    <ClInclude Include="libgit2\src\libgit2\path.h" />
+    <ClInclude Include="libgit2\src\util\win32\path_w32.h" />
+    <ClInclude Include="libgit2\src\libgit2\pathspec.h" />
+    <ClInclude Include="libgit2\deps\pcre\pcre.h" />
+    <ClInclude Include="config\pcre_config.h" />
+    <ClInclude Include="libgit2\deps\pcre\pcre_internal.h" />
+    <ClInclude Include="libgit2\deps\pcre\pcreposix.h" />
+    <ClInclude Include="libgit2\src\util\pool.h" />
+    <ClInclude Include="libgit2\src\util\posix.h" />
+    <ClInclude Include="libgit2\src\util\win32\posix.h" />
+    <ClInclude Include="libgit2\src\util\pqueue.h" />
+    <ClInclude Include="libgit2\src\util\win32\precompiled.h" />
+    <ClInclude Include="libgit2\src\util\process.h" />
+    <ClInclude Include="libgit2\src\libgit2\proxy.h" />
+    <ClInclude Include="libgit2\src\libgit2\push.h" />
+    <ClInclude Include="libgit2\src\util\rand.h" />
+    <ClInclude Include="libgit2\src\libgit2\reader.h" />
+    <ClInclude Include="libgit2\src\libgit2\refdb.h" />
+    <ClInclude Include="libgit2\src\libgit2\reflog.h" />
+    <ClInclude Include="libgit2\src\libgit2\refs.h" />
+    <ClInclude Include="libgit2\src\libgit2\refspec.h" />
+    <ClInclude Include="libgit2\src\util\regexp.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\registry.h" />
+    <ClInclude Include="libgit2\src\libgit2\remote.h" />
+    <ClInclude Include="libgit2\src\util\win32\reparse.h" />
+    <ClInclude Include="libgit2\src\libgit2\repo_template.h" />
+    <ClInclude Include="libgit2\src\libgit2\repository.h" />
+    <ClInclude Include="libgit2\src\libgit2\revwalk.h" />
+    <ClInclude Include="libgit2\src\util\runtime.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\schannel.h" />
+    <ClInclude Include="libgit2\src\libgit2\settings.h" />
+    <ClInclude Include="libgit2\src\util\hash\rfc6234\sha.h" />
+    <ClInclude Include="libgit2\src\util\hash\sha.h" />
+    <ClInclude Include="libgit2\src\libgit2\signature.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\smart.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\socket.h" />
+    <ClInclude Include="libgit2\src\util\sortedcache.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\ssh_exec.h" />
+    <ClInclude Include="libgit2\src\libgit2\transports\ssh_libssh2.h" />
+    <ClInclude Include="libgit2\src\util\staticstr.h" />
+    <ClInclude Include="libgit2\src\libgit2\status.h" />
+    <ClInclude Include="libgit2\src\util\allocators\stdalloc.h" />
+    <ClInclude Include="libgit2\src\util\str.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\stransport.h" />
+    <ClInclude Include="libgit2\src\libgit2\strarray.h" />
+    <ClInclude Include="libgit2\src\libgit2\stream.h" />
+    <ClInclude Include="libgit2\src\util\strlist.h" />
+    <ClInclude Include="libgit2\src\util\strmap.h" />
+    <ClInclude Include="libgit2\src\util\strnlen.h" />
+    <ClInclude Include="libgit2\src\libgit2\submodule.h" />
+    <ClInclude Include="libgit2\src\libgit2\sysdir.h" />
+    <ClInclude Include="libgit2\src\libgit2\tag.h" />
+    <ClInclude Include="libgit2\src\util\thread.h" />
+    <ClInclude Include="libgit2\src\libgit2\streams\tls.h" />
+    <ClInclude Include="libgit2\src\libgit2\trace.h" />
+    <ClInclude Include="libgit2\src\libgit2\transaction.h" />
+    <ClInclude Include="libgit2\src\libgit2\tree-cache.h" />
+    <ClInclude Include="libgit2\src\libgit2\tree.h" />
+    <ClInclude Include="libgit2\deps\zlib\trees.h" />
+    <ClInclude Include="libgit2\deps\pcre\ucp.h" />
+    <ClInclude Include="libgit2\src\libgit2\userdiff.h" />
+    <ClInclude Include="libgit2\src\util\win32\utf-conv.h" />
+    <ClInclude Include="libgit2\src\util\utf8.h" />
+    <ClInclude Include="libgit2\src\util\util.h" />
+    <ClInclude Include="libgit2\src\util\varint.h" />
+    <ClInclude Include="libgit2\src\util\vector.h" />
+    <ClInclude Include="libgit2\src\util\win32\version.h" />
+    <ClInclude Include="libgit2\src\util\win32\w32_buffer.h" />
+    <ClInclude Include="libgit2\src\util\win32\w32_common.h" />
+    <ClInclude Include="libgit2\src\util\win32\w32_leakcheck.h" />
+    <ClInclude Include="libgit2\src\util\win32\w32_util.h" />
+    <ClInclude Include="libgit2\src\util\wildmatch.h" />
+    <ClInclude Include="libgit2\src\util\win32\win32-compat.h" />
+    <ClInclude Include="libgit2\src\util\hash\win32.h" />
+    <ClInclude Include="libgit2\src\util\allocators\win32_leakcheck.h" />
+    <ClInclude Include="libgit2\src\libgit2\worktree.h" />
+    <ClInclude Include="libgit2\deps\xdiff\xdiff.h" />
+    <ClInclude Include="libgit2\deps\xdiWff\xdiffi.h" />
+    <ClInclude Include="libgit2\deps\xdiff\xemit.h" />
+    <ClInclude Include="libgit2\deps\xdiff\xinclude.h" />
+    <ClInclude Include="libgit2\deps\xdiff\xmacros.h" />
+    <ClInclude Include="libgit2\deps\xdiff\xprepare.h" />
+    <ClInclude Include="libgit2\deps\xdiff\xtypes.h" />
+    <ClInclude Include="libgit2\deps\xdiff\xutils.h" />
+    <ClInclude Include="libgit2\deps\zlib\zconf.h" />
+    <ClInclude Include="libgit2\deps\zlib\zlib.h" />
+    <ClInclude Include="libgit2\src\util\win32\win32_thread.h" />
+    <ClInclude Include="libgit2\src\util\zstream.h" />
+    <ClInclude Include="libgit2\deps\zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -BxC:\Qt\6.7.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -BxC:\Qt\6.7.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -Zi -MDd -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -BxC:\Qt\6.7.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -BxC:\Qt\6.7.2\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\Qt\6.7.2\msvc2019_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

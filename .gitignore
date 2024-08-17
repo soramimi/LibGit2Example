@@ -3,3 +3,5 @@ build/
 *.user
 *.o
 .qmake.stash
+.vs/
+debug/

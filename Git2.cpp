@@ -1,6 +1,7 @@
-#include <git2.h>
+#include "libgit2/include/git2.h"
 #include "Git2.h"
 #include <cstring>
+#include <stdexcept>
 
 class Error : public std::runtime_error {
 private:
@@ -34,21 +35,6 @@ bool Git2::TreeItem::iscommit() const
 {
 	return filemode == GIT_FILEMODE_COMMIT;
 }
-
-//std::string Git2::TreeItem::path() const
-//{
-//	std::string path = subdir;
-//	if (!path.empty()) {
-//		path += '/';
-//	}
-//	path += filename;
-//	return path;
-//}
-
-struct Git2::Private {
-	git_repository *repo = nullptr;
-};
-
 
 static std::string oid_string(const git_oid *oid)
 {
@@ -103,7 +89,7 @@ static std::optional<std::vector<Git2::TreeItem>> ls_tree_internal(git_repositor
 	return items;
 }
 
-std::optional<std::vector<Git2::TreeItem>> Git2::ls_tree(const std::string &path)
+static std::optional<std::vector<Git2::TreeItem>> ls_tree(git_repository *repo, const std::string &path)
 {
 	std::optional<std::vector<Git2::TreeItem>> ret;
 	git_commit *commit = nullptr;
@@ -114,11 +100,11 @@ std::optional<std::vector<Git2::TreeItem>> Git2::ls_tree(const std::string &path
 		int error;
 
 		// HEADのOIDを取得
-		error = git_reference_name_to_id(&oid, m->repo, "HEAD");
+		error = git_reference_name_to_id(&oid, repo, "HEAD");
 		if (error < 0) throw Error(error, git_error_last());
 
 		// コミットを取得
-		error = git_commit_lookup(&commit, m->repo, &oid);
+		error = git_commit_lookup(&commit, repo, &oid);
 		if (error < 0) throw Error(error, git_error_last());
 
 		// コミットからツリーを取得
@@ -126,7 +112,7 @@ std::optional<std::vector<Git2::TreeItem>> Git2::ls_tree(const std::string &path
 		if (error < 0) throw Error(error, git_error_last());
 
 		// ツリーの内容をリスト
-		ret = ls_tree_internal(m->repo, tree, path);
+		ret = ls_tree_internal(repo, tree, path);
 	} catch (Error &e) {
 		fprintf(stderr, "Git2 Error: %s\n", e.what());
 	}
@@ -138,7 +124,7 @@ std::optional<std::vector<Git2::TreeItem>> Git2::ls_tree(const std::string &path
 	return ret;
 }
 
-std::optional<std::vector<char> > Git2::cat_file(const std::string &id)
+std::optional<std::vector<char> > cat_file(git_repository *repo, const std::string &id)
 {
 	bool ok = true;
 	std::vector<char> data;
@@ -153,7 +139,7 @@ std::optional<std::vector<char> > Git2::cat_file(const std::string &id)
 		if (error < 0) throw Error(error, git_error_last());
 
 		// BLOBを取得
-		error = git_blob_lookup(&blob, m->repo, &oid);
+		error = git_blob_lookup(&blob, repo, &oid);
 		if (error < 0) throw Error(error, git_error_last());
 
 		// BLOBの内容を表示
@@ -171,19 +157,32 @@ std::optional<std::vector<char> > Git2::cat_file(const std::string &id)
 }
 
 Git2::Git2()
-	: m(new Private)
 {
 	git_libgit2_init();
 }
 
 Git2::~Git2()
 {
-	close();
 	git_libgit2_shutdown();
+}
+
+struct Git2::Repository::Private {
+	git_repository *repo = nullptr;
+};
+
+Git2::Repository::Repository(Git2 *git2)
+	: m(new Private)
+	, git2_(git2)
+{
+}
+
+Git2::Repository::~Repository()
+{
+	close();
 	delete m;
 }
 
-bool Git2::open(const char *path)
+bool Git2::Repository::open(const char *path)
 {
 	// リポジトリを開く
 	int error = git_repository_open(&m->repo, path);
@@ -194,7 +193,7 @@ bool Git2::open(const char *path)
 	return true;
 }
 
-void Git2::close()
+void Git2::Repository::close()
 {
 	if (m->repo) {
 		git_repository_free(m->repo);
@@ -202,4 +201,12 @@ void Git2::close()
 	}
 }
 
+std::optional<std::vector<Git2::TreeItem> > Git2::Repository::ls_tree(const std::string &path)
+{
+	return ::ls_tree(m->repo, path);
+}
 
+std::optional<std::vector<char> > Git2::Repository::cat_file(const std::string &id)
+{
+	return ::cat_file(m->repo, id);
+}

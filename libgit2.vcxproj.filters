@@ -1,0 +1,1283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libgit2\deps\zlib\adler32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\alloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\annotated_commit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\apply.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\attr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\attr_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\attrcache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\auth.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\auth_gssapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\auth_ntlmclient.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\auth_sspi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\blame.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\blame_git.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\blob.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\branch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\buf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\hash\builtin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\cache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\checkout.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\cherrypick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\clone.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\commit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\commit_graph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\commit_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\config_cache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\config_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\config_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\config_mem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\config_parse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\config_snapshot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\crc32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\credential.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\credential_helpers.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\crlf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\date.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\allocators\debugalloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\deflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\delta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\describe.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_driver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_generate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_parse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_print.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_stats.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_tform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\diff_xdiff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\dir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\email.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\errors.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\allocators\failalloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\fetch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\fetchhead.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\filebuf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\fs_path.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\futils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\git.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\grafts.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\graph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\hashsig.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\http.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\httpclient.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\httpparser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\ident.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\idxmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\ignore.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\index.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\indexer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\infback.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\inffast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\inflate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\inftrees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\iterator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\libgit2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\llhttp\llhttp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\local.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\mailmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\mbedtls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\merge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\merge_driver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\merge_file.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\message.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\midx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\mwindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\net.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\notes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\object.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\object_api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\odb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\odb_loose.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\odb_mempack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\odb_pack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\offmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\oid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\oidarray.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\oidmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\openssl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\openssl_dynamic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\openssl_legacy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\pack-objects.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\pack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\parse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\patch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\patch_generate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\patch_parse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\path.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\path_w32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\pathspec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_byte_order.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_chartables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_compile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_dfa_exec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_exec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_fullinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_get.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_globals.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_jit_compile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_maketables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_newline.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_ord2utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_refcount.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_string_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_study.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_tables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_ucd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_valid_utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcre_xclass.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\pcre\pcreposix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\pool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\posix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\posix_w32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\pqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\precompiled.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\proxy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\push.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\rand.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\reader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\rebase.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\refdb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\refdb_fs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\reflog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\refs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\refspec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\regexp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\registry.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\remote.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\repository.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\reset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\revert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\revparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\revwalk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\runtime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\schannel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\settings.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\hash\rfc6234\sha224-256.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\signature.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\smart.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\smart_pkt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\smart_protocol.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\socket.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\sortedcache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\ssh.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\ssh_exec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\ssh_libssh2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\stash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\status.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\allocators\stdalloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\str.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\stransport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\strarray.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\strlist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\strmap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\submodule.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\sysdir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\tag.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\thread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\streams\tls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\trace.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\trailer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transaction.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\tree-cache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\tree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\trees.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\tsort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\utf-conv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\varint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\vector.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\w32_buffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\w32_leakcheck.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\w32_util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\wildmatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\hash\win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\allocators\win32_leakcheck.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\transports\winhttp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\libgit2\worktree.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\xdiff\xdiffi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\xdiff\xemit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\xdiff\xhistogram.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\xdiff\xmerge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\xdiff\xpatience.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\xdiff\xprepare.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\xdiff\xutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\zstream.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\zlib\zutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\src\util\win32\win32_thread.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\llhttp\llhttp_api.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libgit2\deps\llhttp\llhttp_http.c">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libgit2\src\util\alloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\annotated_commit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\apply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\assert_safe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\attr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\attr_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\attrcache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\auth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\auth_negotiate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\auth_ntlm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\bitvec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\blame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\blame_git.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\blob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\branch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\buf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\builtin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\cache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\cc-compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\checkout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\clone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\collisiondetect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\commit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\commit_graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\commit_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\common_crypto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\config_backend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\config_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\config_parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\crc32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\ctype_compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\date.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\allocators\debugalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\deflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\delta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff_driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff_generate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff_parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff_stats.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff_tform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\diff_xdiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\dir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\email.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\errors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\allocators\failalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\fetch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\fetchhead.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\filebuf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\fs_path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\futils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\git-xdiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\git2_features.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\git2_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\grafts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\gzguts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\httpclient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\httpparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\idxmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\ignore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\index.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\indexer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\inffast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\inffixed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\inflate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\inftrees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\integer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\khash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\mailmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\mbedtls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\mbedtls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\merge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\merge_driver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\midx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\mingw-compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\msvc-compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\mwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\net.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\notes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\odb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\offmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\oid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\oidarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\oidmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\openssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\openssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\openssl_dynamic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\openssl_legacy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\pack-objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\pack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\patch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\patch_generate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\patch_parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\path.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\path_w32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\pathspec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\pcre\pcre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config\pcre_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\pcre\pcre_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\pcre\pcreposix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\posix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\posix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\pqueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\precompiled.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\process.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\proxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\push.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\rand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\refdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\reflog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\refs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\refspec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\regexp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\registry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\remote.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\reparse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\repo_template.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\repository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\revwalk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\runtime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\schannel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\rfc6234\sha.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\sha.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\signature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\smart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\socket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\sortedcache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\ssh_exec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transports\ssh_libssh2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\staticstr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\allocators\stdalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\str.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\stransport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\strarray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\strlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\strmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\strnlen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\submodule.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\sysdir.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\tag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\streams\tls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\trace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\transaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\tree-cache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\tree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\trees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\pcre\ucp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\userdiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\utf-conv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\utf8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\varint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\w32_buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\w32_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\w32_leakcheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\w32_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\wildmatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\win32-compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\hash\win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\allocators\win32_leakcheck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\libgit2\worktree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\xdiff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiWff\xdiffi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\xemit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\xinclude.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\xmacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\xprepare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\xtypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\xdiff\xutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\zconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\zlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\zstream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\zlib\zutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\src\util\win32\win32_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libgit2\deps\llhttp\llhttp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
