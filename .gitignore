@@ -1,0 +1,5 @@
+_bin/
+build/
+*.user
+*.o
+.qmake.stash
