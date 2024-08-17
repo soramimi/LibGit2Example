@@ -8,4 +8,8 @@ CONFIG -= qt
 LIBS += -lgit2
 
 SOURCES += \
+        Git2.cpp \
         main.cpp
+
+HEADERS += \
+    Git2.h
