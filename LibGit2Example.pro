@@ -7,8 +7,6 @@ CONFIG += console c++17
 CONFIG -= app_bundle
 CONFIG -= qt
 
-# win32:INCLUDEPATH += C:/OpenSSL/include
-
 win32:INCLUDEPATH += $$PWD/libgit2/include
 win32:INCLUDEPATH += $$PWD/libgit2/src/libgit2
 win32:INCLUDEPATH += $$PWD/libgit2/src/util
@@ -22,8 +20,8 @@ win32:QMAKE_CFLAGS += /FI $$PWD/config/git2_features.h
 win32:QMAKE_CFLAGS += /FI $$PWD/config/pcre_config.h
 win32:DEFINES += LIBGIT2_NO_FEATURES_H=1
 
-win32:LIBS += -lCrypt32 -lAdvapi32 -lSecur32 -lDbghelp $$PWD/_bin/libgit2.lib
-# !win32:LIBS += -lgit2
+win32:LIBS += -lCrypt32 -lAdvapi32 -lSecur32 -lDbghelp
+!win32:LIBS += -lgit2
 
 SOURCES = \
 	libgit2\deps\llhttp\llhttp.c \
