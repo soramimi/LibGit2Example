@@ -1,12 +1,12 @@
-#ifndef GIT2_H
-#define GIT2_H
+#ifndef MYLIBGIT2_H
+#define MYLIBGIT2_H
 
 #include <string>
 #include <vector>
 #include <optional>
 #include <cstdint>
 
-class Git2 {
+class MyLibGit2 {
 	friend class Repository;
 public:
 	struct TreeItem {
@@ -19,16 +19,16 @@ public:
 		bool iscommit() const;
 	};
 public:
-	Git2();
-	~Git2();
+	MyLibGit2();
+	~MyLibGit2();
 
 	class Repository {
 	private:
 		struct Private;
 		Private *m;
-		Git2 *git2_;
+		MyLibGit2 *git2_;
 	public:
-		Repository(Git2 *git2);
+		Repository(MyLibGit2 *git2);
 		~Repository();
 		bool open(char const *path);
 		void close();
@@ -37,4 +37,4 @@ public:
 	};
 };
 
-#endif // GIT2_H
+#endif // MYLIBGIT2_H

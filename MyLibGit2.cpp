@@ -1,5 +1,5 @@
 #include "libgit2/include/git2.h"
-#include "Git2.h"
+#include "MyLibGit2.h"
 #include <cstring>
 #include <stdexcept>
 
@@ -16,22 +16,22 @@ public:
 	}
 };
 
-bool Git2::TreeItem::isblob() const
+bool MyLibGit2::TreeItem::isblob() const
 {
 	return filemode == GIT_FILEMODE_BLOB || filemode == GIT_FILEMODE_BLOB_EXECUTABLE;
 }
 
-bool Git2::TreeItem::istree() const
+bool MyLibGit2::TreeItem::istree() const
 {
 	return filemode == GIT_FILEMODE_TREE;
 }
 
-bool Git2::TreeItem::islink() const
+bool MyLibGit2::TreeItem::islink() const
 {
 	return filemode == GIT_FILEMODE_LINK;
 }
 
-bool Git2::TreeItem::iscommit() const
+bool MyLibGit2::TreeItem::iscommit() const
 {
 	return filemode == GIT_FILEMODE_COMMIT;
 }
@@ -50,14 +50,14 @@ static std::vector<char> blob_data(const git_blob *blob)
 	return std::vector<char>(content, content + size);
 }
 
-static std::optional<std::vector<Git2::TreeItem>> ls_tree_internal(git_repository *repo, const git_tree *tree, const std::string_view &path)
+static std::optional<std::vector<MyLibGit2::TreeItem>> ls_tree_internal(git_repository *repo, const git_tree *tree, const std::string_view &path)
 {
-	std::vector<Git2::TreeItem> items;
+	std::vector<MyLibGit2::TreeItem> items;
 	size_t count = git_tree_entrycount(tree);
 	for (size_t i = 0; i < count; i++) {
 		const git_tree_entry *entry = git_tree_entry_byindex(tree, i);
 		const git_oid *oid = git_tree_entry_id(entry);
-		Git2::TreeItem item;
+		MyLibGit2::TreeItem item;
 		item.filemode = git_tree_entry_filemode(entry);
 		item.id = oid_string(oid);
 		item.filename = git_tree_entry_name(entry);
@@ -89,9 +89,9 @@ static std::optional<std::vector<Git2::TreeItem>> ls_tree_internal(git_repositor
 	return items;
 }
 
-static std::optional<std::vector<Git2::TreeItem>> ls_tree(git_repository *repo, const std::string &path)
+static std::optional<std::vector<MyLibGit2::TreeItem>> ls_tree(git_repository *repo, const std::string &path)
 {
-	std::optional<std::vector<Git2::TreeItem>> ret;
+	std::optional<std::vector<MyLibGit2::TreeItem>> ret;
 	git_commit *commit = nullptr;
 	git_tree *tree = nullptr;
 	git_oid oid;
@@ -156,33 +156,33 @@ std::optional<std::vector<char> > cat_file(git_repository *repo, const std::stri
 	return std::nullopt;
 }
 
-Git2::Git2()
+MyLibGit2::MyLibGit2()
 {
 	git_libgit2_init();
 }
 
-Git2::~Git2()
+MyLibGit2::~MyLibGit2()
 {
 	git_libgit2_shutdown();
 }
 
-struct Git2::Repository::Private {
+struct MyLibGit2::Repository::Private {
 	git_repository *repo = nullptr;
 };
 
-Git2::Repository::Repository(Git2 *git2)
+MyLibGit2::Repository::Repository(MyLibGit2 *git2)
 	: m(new Private)
 	, git2_(git2)
 {
 }
 
-Git2::Repository::~Repository()
+MyLibGit2::Repository::~Repository()
 {
 	close();
 	delete m;
 }
 
-bool Git2::Repository::open(const char *path)
+bool MyLibGit2::Repository::open(const char *path)
 {
 	// リポジトリを開く
 	int error = git_repository_open(&m->repo, path);
@@ -193,7 +193,7 @@ bool Git2::Repository::open(const char *path)
 	return true;
 }
 
-void Git2::Repository::close()
+void MyLibGit2::Repository::close()
 {
 	if (m->repo) {
 		git_repository_free(m->repo);
@@ -201,12 +201,12 @@ void Git2::Repository::close()
 	}
 }
 
-std::optional<std::vector<Git2::TreeItem> > Git2::Repository::ls_tree(const std::string &path)
+std::optional<std::vector<MyLibGit2::TreeItem> > MyLibGit2::Repository::ls_tree(const std::string &path)
 {
 	return ::ls_tree(m->repo, path);
 }
 
-std::optional<std::vector<char> > Git2::Repository::cat_file(const std::string &id)
+std::optional<std::vector<char> > MyLibGit2::Repository::cat_file(const std::string &id)
 {
 	return ::cat_file(m->repo, id);
 }

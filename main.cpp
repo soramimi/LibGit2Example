@@ -1,4 +1,4 @@
-#include "Git2.h"
+#include "MyLibGit2.h"
 
 #include <stdio.h>
 
@@ -6,12 +6,12 @@
 
 int main(int argc, char **argv)
 {
-	Git2 git2;
-	Git2::Repository repo(&git2);
-	repo.open("../../Guitar");
-	auto items = repo.ls_tree("docs");
+	MyLibGit2 git2;
+	MyLibGit2::Repository repo(&git2);
+	repo.open("../zlib");
+	auto items = repo.ls_tree("doc");
 	if (items) {
-		for (Git2::TreeItem const &item : *items) {
+		for (MyLibGit2::TreeItem const &item : *items) {
 			printf("%08x %s %s\n", item.filemode, item.id.c_str(), item.filename.c_str());
 		}
 	}
