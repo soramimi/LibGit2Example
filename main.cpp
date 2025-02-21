@@ -8,7 +8,12 @@ int main(int argc, char **argv)
 {
 	MyLibGit2 git2;
 	MyLibGit2::Repository repo(&git2);
+#ifdef _WIN32
 	repo.open("C:/develop/jstream");
+#else
+	repo.open("/home/soramimi/develop/pytorch");
+#endif
+
 #if 0
 	auto items = repo.ls_tree("");
 	if (items) {

@@ -272,6 +272,8 @@ void print_commit_parents(git_repository *repo)
 	// git_revwalk_sorting(walker, GIT_SORT_TIME);  // 時系列順にソート
 	git_revwalk_push_head(walker);  // HEADからのコミットを辿る
 
+	int count = 0;
+
 	// コミットと親コミットのハッシュを表示
 	while (!git_revwalk_next(&oid, walker)) {
 		git_commit_lookup(&commit, repo, &oid);
@@ -282,17 +284,25 @@ void print_commit_parents(git_repository *repo)
 
 		// 親コミットの取得
 		parent_count = git_commit_parentcount(commit);
-		printf("%lld %s", time, commit_hash);  // コミットハッシュを表示
+		// printf("%lld %s", time, commit_hash);  // コミットハッシュを表示
 
 		for (i = 0; i < parent_count; ++i) {
 			git_commit_parent(&parent_commit, commit, i);
 			parent_hash = git_oid_tostr_s(git_commit_id(parent_commit));
-			printf(" %s", parent_hash);  // 親コミットハッシュを表示
+			// printf(" %s", parent_hash);  // 親コミットハッシュを表示
 		}
 
-		printf("\n");
+		// printf("\n");
 
 		git_commit_free(commit);
+
+		count++;
+		if (count % 1000 == 0) {
+			printf("%d\n", count);
+		}
+		if (count >= 10000) {
+			break;
+		}
 	}
 
 	git_revwalk_free(walker);
