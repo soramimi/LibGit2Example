@@ -34,6 +34,7 @@ public:
 		void close();
 		std::optional<std::vector<TreeItem>> ls_tree(std::string const &path);
 		std::optional<std::vector<char>> cat_file(std::string const &id);
+		void log_all();
 	};
 };
 

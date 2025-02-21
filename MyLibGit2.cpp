@@ -2,6 +2,21 @@
 #include "MyLibGit2.h"
 #include <cstring>
 #include <stdexcept>
+#include <chrono>
+
+class ElapsedTimer {
+private:
+	std::chrono::system_clock::time_point start_;
+public:
+	void start()
+	{
+		start_ = std::chrono::system_clock::now();
+	}
+	unsigned long elapsed() const
+	{
+		return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - start_).count();
+	}
+};
 
 class Error : public std::runtime_error {
 private:
@@ -210,3 +225,84 @@ std::optional<std::vector<char> > MyLibGit2::Repository::cat_file(const std::str
 {
 	return ::cat_file(m->repo, id);
 }
+
+
+void print_commit_log(git_repository *repo)
+{
+	git_revwalk *walker = NULL;
+	git_oid oid;
+	git_commit *commit = NULL;
+	const git_signature *author;
+	const char *message;
+
+	// リポジトリ内の全てのリファレンスを取得
+	git_revwalk_new(&walker, repo);
+	git_revwalk_sorting(walker, GIT_SORT_TIME);  // 時系列順にソート
+	git_revwalk_push_head(walker);  // HEADからのコミットを辿る
+
+	// 全てのコミットを表示
+	while (!git_revwalk_next(&oid, walker)) {
+		git_commit_lookup(&commit, repo, &oid);
+		author = git_commit_author(commit);
+		message = git_commit_message(commit);
+
+		printf("Commit: %s\n", git_oid_tostr_s(&oid));
+		printf("Author: %s <%s>\n", author->name, author->email);
+		printf("Message: %s\n\n", message);
+
+		git_commit_free(commit);
+	}
+
+	git_revwalk_free(walker);
+}
+
+void print_commit_parents(git_repository *repo)
+{
+	git_revwalk *walker = NULL;
+	git_oid oid;
+	git_commit *commit = NULL;
+	git_commit *parent_commit = NULL;
+	size_t parent_count;
+	size_t i;
+	const char *commit_hash;
+	const char *parent_hash;
+
+	// 全てのリファレンスを取得
+	git_revwalk_new(&walker, repo);
+	// git_revwalk_sorting(walker, GIT_SORT_TIME);  // 時系列順にソート
+	git_revwalk_push_head(walker);  // HEADからのコミットを辿る
+
+	// コミットと親コミットのハッシュを表示
+	while (!git_revwalk_next(&oid, walker)) {
+		git_commit_lookup(&commit, repo, &oid);
+		git_time_t time = git_commit_time(commit);
+
+		// コミットハッシュを取得
+		commit_hash = git_oid_tostr_s(&oid);
+
+		// 親コミットの取得
+		parent_count = git_commit_parentcount(commit);
+		printf("%lld %s", time, commit_hash);  // コミットハッシュを表示
+
+		for (i = 0; i < parent_count; ++i) {
+			git_commit_parent(&parent_commit, commit, i);
+			parent_hash = git_oid_tostr_s(git_commit_id(parent_commit));
+			printf(" %s", parent_hash);  // 親コミットハッシュを表示
+		}
+
+		printf("\n");
+
+		git_commit_free(commit);
+	}
+
+	git_revwalk_free(walker);
+}
+
+void MyLibGit2::Repository::log_all()
+{
+	ElapsedTimer timer;
+	timer.start();
+	print_commit_parents(m->repo);
+	printf("%lldms\n", timer.elapsed());
+}
+
